@@ -1,0 +1,497 @@
+:root {
+  --cream:  #FBF6E6;  /* page background */
+  --card:   #FFFDF6;  /* cards sit slightly lighter than the page */
+  --ink:    #2B1420;  /* body text: very dark wine, softer than black */
+  --muted:  #6E5A64;  /* secondary text (passes contrast on cream) */
+  --wine:   #631D3F;  /* main accent: buttons, badge, dark bands */
+  --wine-dark: #43132B; /* footer + hover state */
+  --yellow: #FFEC8E;  /* highlight accent: tags, underlines, text on wine */
+  --line:   #E7DCC0;  /* thin borders */
+  --alert:  #D62839;  /* notification badge red */
+  --header-h: 72px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+}
+
+body {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+}
+
+h1, h2, h3 { 
+    font-family: "Playfair Display", Georgia, serif; 
+    line-height: 1.15; 
+}
+
+a { 
+    color: inherit; 
+}
+
+.wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 246, 230, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+
+.navbar .wrap { 
+    height: var(--header-h); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 1rem;
+}
+
+.nav-logo { 
+    font-family: "Playfair Display", serif; 
+    font-weight: 700; 
+    font-size: 1.3rem; 
+    text-decoration: none; 
+    color: var(--wine); 
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 2rem; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    font-size: 0.95rem; 
+    color: var(--muted); 
+    transition: color .2s; 
+}
+
+.nav-links a:hover { 
+    color: var(--wine); 
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  font: 600 0.92rem "Space Grotesk", sans-serif;
+  text-decoration: none;
+  background: var(--wine);
+  color: #fff;
+  border: 1.5px solid var(--wine);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.btn:hover { 
+    background: var(--wine-dark); 
+}
+
+.btn.outline { 
+    background: transparent; 
+    color: var(--wine); 
+}          /* secondary style */
+
+.btn.outline:hover { 
+    background: var(--yellow); 
+}
+
+.btn.on-wine { 
+    background: var(--yellow); 
+    color: var(--wine); 
+    border-color: var(--yellow); 
+} /* for use on dark wine */
+
+.btn.on-wine:hover { 
+    background: #fff; 
+}
+
+.btn:focus-visible, 
+.help-btn:focus-visible, 
+.modal-close:focus-visible, 
+.nav-links a:focus-visible {
+  outline: 3px solid var(--wine); 
+  outline-offset: 3px;  /* visible focus ring for keyboard users */
+}
+
+.hero { 
+    padding: clamp(3rem, 8vw, 6rem) 0; 
+}
+
+.hero .wrap { 
+    display: grid; 
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: clamp(2rem, 6vw, 5rem); 
+    align-items: center; 
+}
+
+.hero h1 { 
+    font-size: clamp(2.4rem, 5.2vw, 4rem); 
+    letter-spacing: -0.02em; 
+    color: var(--wine); 
+}
+
+.hero .lead { 
+    max-width: 52ch; 
+    margin: 1.25rem 0 2rem; 
+    font-size: 1.1rem; 
+    color: var(--muted); 
+}
+
+.btn-row { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.75rem; 
+}
+
+.profile-card {
+  position: relative;
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  background: var(--wine);
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 24px 50px -24px rgba(99, 29, 63, 0.6);
+}
+
+.avatar-wrap { 
+    position: relative; 
+    width: 120px; 
+    height: 120px; 
+    margin: 0 auto 1.25rem; 
+}
+
+.avatar {
+  width: 100%; height: 100%;
+  display: grid; 
+  place-items: center;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--wine);
+  font: 700 3rem "Playfair Display", serif;
+}
+
+.badge {
+  position: absolute;
+  top: 2px; 
+  right: 2px;
+  min-width: 30px; 
+  height: 30px; 
+  padding: 0 8px;
+  display: grid; 
+  place-items: center;
+  background: var(--alert);
+  color: #fff; 
+  font-size: 0.8rem; 
+  font-weight: 700;
+  border: 3px solid var(--wine);            /* ring in the card color separates badge from avatar */
+  border-radius: 999px;
+}
+
+.profile-card h2 { 
+    font-size: 1.5rem; 
+}
+.profile-card .role { 
+    color: rgba(255, 253, 246, 0.75); 
+    font-size: 0.95rem; margin: 0.25rem 0 1.25rem; 
+}
+.profile-links { 
+    display: flex; 
+    justify-content: center; 
+    gap: 0.6rem; 
+    flex-wrap: wrap; 
+}
+
+.section { 
+    padding: clamp(3rem, 8vw, 5.5rem) 0; 
+}
+
+.section.alt { 
+    background: var(--card); 
+    border-top: 1px solid var(--line); 
+    border-bottom: 1px solid var(--line); 
+}
+
+.section h2 { 
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem); 
+    color: var(--wine); 
+    margin-bottom: 0.75rem; 
+}
+
+.section h2::after { 
+    content: ""; 
+    display: block; 
+    width: 56px; 
+    height: 4px; 
+    margin-top: 0.7rem; 
+    background: var(--yellow); 
+    border-radius: 2px; }
+     /* ::after adds a decorative bar without extra HTML */
+.section .intro { 
+    max-width: 60ch; 
+    color: var(--muted); 
+    margin-bottom: 2.25rem; 
+}
+
+.about-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: clamp(1.5rem, 5vw, 4rem); 
+}
+
+.about-grid p { 
+    color: var(--muted); 
+    max-width: 58ch; 
+}
+
+.project-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+ }
+
+.project-card {
+  position: relative; /* anchor for the status chip */
+  display: flex; 
+  flex-direction: column;
+  padding: 2.25rem 1.75rem 1.75rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--wine);  /* colored top edge = quiet brand accent */
+  border-radius: 12px;
+  transition: box-shadow .25s, border-color .25s;
+}
+.project-card:hover { 
+    box-shadow: 0 16px 34px -20px rgba(99, 29, 63, 0.45); 
+    border-color: var(--wine); 
+}
+
+.project-status {
+  position: absolute; top: 14px; right: 16px;
+  padding: 0.15rem 0.65rem;
+  background: var(--yellow); color: var(--wine);
+  border-radius: 999px; font-size: 0.75rem; font-weight: 700;
+}
+
+.project-card h3 { 
+    font-size: 1.4rem; 
+    color: var(--wine); 
+    margin-bottom: 0.5rem; 
+}
+
+.project-card p { 
+    color: var(--muted); 
+    font-size: 0.95rem; 
+}
+
+.tech-stack { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.45rem; 
+    list-style: none; 
+    margin: 1.1rem 0 1.4rem; 
+}
+
+.tech-stack li { 
+    padding: 0.15rem 0.7rem; 
+    border: 1px solid var(--line); 
+    border-radius: 6px; 
+    font-size: 0.8rem; 
+    color: var(--ink); 
+    background: var(--cream); 
+}
+.project-link { 
+    margin-top: auto; 
+    font-weight: 600; 
+    font-size: 0.92rem; 
+    color: var(--wine); 
+    text-decoration: none;
+}
+
+.project-link:hover { 
+    text-decoration: underline; 
+    text-underline-offset: 4px; 
+}
+
+.position-grid { 
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1rem; 
+}
+
+.position-item { 
+    padding: 1.25rem; 
+    background: var(--cream); 
+    border: 1px solid var(--line); 
+    border-radius: 10px; 
+}
+
+.position-item code { 
+    display: inline-block; 
+    margin-bottom: 0.5rem; 
+    padding: 0.1rem 0.55rem; 
+    background: var(--wine); 
+    color: var(--yellow); 
+    border-radius: 5px; 
+    font: 500 0.85rem "DM Mono", monospace; 
+}
+
+.position-item p { 
+    font-size: 0.88rem; 
+    color: var(--muted); 
+    line-height: 1.55; 
+}
+
+.contact { 
+    background: var(--wine); 
+    color: #fff; 
+    padding: clamp(3rem, 7vw, 4.5rem) 0; 
+}
+
+.contact .wrap { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 2rem; flex-wrap: wrap; 
+}
+
+.contact h2 { 
+    color: #fff; 
+    font-size: clamp(1.7rem, 3.4vw, 2.3rem); 
+}
+
+.contact p { 
+    color: rgba(255, 253, 246, 0.75); 
+    margin-top: 0.4rem; 
+}
+
+footer { 
+    background: var(--wine-dark); 
+    color: rgba(255, 253, 246, 0.7); 
+    padding: 1.5rem 0; 
+    font-size: 0.85rem; 
+}
+
+footer .wrap { 
+    display: flex; 
+    justify-content: space-between; 
+    gap: 1rem; 
+    flex-wrap: wrap; 
+}
+
+footer a { 
+    color: var(--yellow); 
+    text-decoration: none; 
+}
+
+.help-btn {
+  position: fixed;
+  right: 24px; bottom: 24px;               /* distance from the window's right and bottom edges */
+  z-index: 200;                            /* above content and navbar */
+  width: 54px; height: 54px;
+  border: 0; border-radius: 50%;
+  background: var(--wine); color: var(--yellow);
+  font: 700 1.4rem "Playfair Display", serif;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -8px rgba(67, 19, 43, 0.6);
+  transition: background .2s;
+}
+
+.help-btn:hover { 
+    background: var(--wine-dark); 
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;                                /* shorthand: top/right/bottom/left all 0 = covers the whole window */
+  z-index: 300;                            /* highest layer: covers the sticky navbar */
+  background: rgba(43, 20, 32, 0.55);
+  display: none;                           /* hidden until JavaScript adds .open */
+}
+.modal-overlay.open { 
+    display: block; 
+}
+
+.modal {
+  position: fixed;
+  top: 50%; 
+  left: 50%;                     /* puts the box's top-left corner at the window's center */
+  transform: translate(-50%, -50%);        /* shifts it back by half its own size = perfectly centered */
+  width: min(92vw, 500px);                 /* the smaller of 92% of screen or 500px */
+  padding: 2.5rem 2rem 2rem;
+  background: var(--card);
+  border-top: 5px solid var(--wine);
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -20px rgba(43, 20, 32, 0.6);
+}
+
+.modal h2 { 
+    font-size: 1.6rem; 
+    color: var(--wine); 
+    margin-bottom: 0.6rem; 
+}
+
+.modal p { 
+    color: var(--muted); 
+    font-size: 0.95rem; 
+}
+.modal-code { 
+    margin-top: 1.25rem; 
+    padding: 1rem 1.2rem; 
+    background: var(--wine); 
+    color: var(--yellow); 
+    border-radius: 8px; 
+    font: 400 0.85rem/1.8 "DM Mono", monospace; 
+}
+/* Close button -> position: absolute inside the modal.
+   A fixed element counts as positioned, so the X anchors to the modal's corner. */
+.modal-close {
+  position: absolute; 
+  top: 12px; 
+  right: 14px;
+  width: 36px; 
+  height: 36px;
+  border: 0; 
+  border-radius: 50%;
+  background: transparent; 
+  color: var(--wine);
+  font-size: 1.6rem; 
+  line-height: 1; 
+  cursor: pointer;
+}
+.modal-close:hover { 
+    background: var(--yellow); 
+}
+
+
+@media (max-width: 900px) {
+  .hero .wrap, .about-grid { 
+    grid-template-columns: 1fr; 
+}
+  .position-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+}
+}
+@media (max-width: 640px) {
+  .nav-links { 
+    display: none;    /* keeps the navbar clean on phones; GitHub button stays */
+ }            
+  .project-grid, .position-grid { 
+    grid-template-columns: 1fr;
+ }
+}

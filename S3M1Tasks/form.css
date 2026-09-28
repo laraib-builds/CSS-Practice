@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #631d3f;
+    color: #fff8d4;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px;
+    background-color: #43132b;
+    border: 1px solid rgba(255, 236, 142, 0.25);
+    border-radius: 12px;
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.form-header {
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: #ffec8e;
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.form-header h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.form-header h1 span {
+    color: #ffec8e;
+    font-style: italic;
+}
+
+.form-header > p:last-child {
+    color: rgba(255, 248, 212, 0.6);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.field {
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff8d4;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid rgba(255, 236, 142, 0.2);
+    border-radius: 6px;
+    background-color: #631d3f;
+    color: #fff8d4;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 248, 212, 0.35);
+}
+
+input:focus,
+select:focus {
+    border-color: #ffec8e;
+    box-shadow:
+        0 0 0 3px rgba(255, 236, 142, 0.1);
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffec8e;
+    font-size: 17px;
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    padding-right: 50px;
+}
+
+small {
+    display: block;
+    margin-top: 7px;
+    color: rgba(255, 248, 212, 0.4);
+    font-size: 11px;
+}
+
+.name-row {
+    display: flex;
+    gap: 18px;
+}
+.name-row .field {
+    flex: 1;
+}
+
+.gender {
+    margin: 5px 0 22px;
+    padding: 0;
+    border: none;
+}
+
+.gender legend {
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255, 248, 212, 0.7);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+.radio-group input {
+    accent-color: #ffec8e;
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+}
+select option {
+    background-color: #631d3f;
+    color: #fff8d4;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin: 25px 0;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgba(255, 248, 212, 0.65);
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-group input {
+    margin-top: 3px;
+    accent-color: #ffec8e;
+    cursor: pointer;
+}
+
+.checkbox-group a {
+    color: #ffec8e;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffec8e;
+    color: #631d3f;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+
+    transform: translateY(0);
+}
+
+@media (max-width: 650px) {
+
+    .page {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .form-card {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .form-header h1 {
+
+        font-size: 34px;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 500px) {
+
+    .page {
+
+        align-items: flex-start;
+
+        padding-top: 25px;
+
+    }
+
+
+    .form-card {
+
+        padding: 28px 20px;
+
+        border-radius: 8px;
+
+    }
+
+
+    .form-header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    /*
+
+       FLEXBOX CHANGES TO STACKED LAYOUT
+
+       First Name
+       ↓
+       Last Name
+
+    */
+
+    .name-row {
+
+        flex-direction: column;
+
+        gap: 0;
+
+    }
+
+
+    .radio-group {
+
+        gap: 15px;
+
+    }
+
+
+    .corner-decoration {
+
+        display: none;
+
+    }
+
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                AdminFlow
+            </div>
+            <div class="welcome">
+                Welcome back, <strong>Laraib!</strong>
+            </div>
+            <button class="logout-btn">
+                Logout
+            </button>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-title">
+                MENU
+            </div>
+            <nav>
+                <a href="#" class="nav-link active">
+                    <span>▣</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>◈</span>
+                    Analytics
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>●</span>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-heading">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>
+                        Here's what's happening with your business today.
+                    </p>
+                </div>
+                <button class="date-btn">
+                    This Month ▾
+                </button>
+            </div>
+
+            <section class="cards">
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-title">Total Users</span>
+                        <span class="card-icon blue">♟</span>
+                    </div>
+                    <h2>12,480</h2>
+                    <p class="positive">
+                        ↑ 12.5%
+                        <span>from last month</span>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-title">Revenue</span>
+                        <span class="card-icon purple">$</span>
+                    </div>
+                    <h2>$48,290</h2>
+                    <p class="positive">
+                        ↑ 8.2%
+                        <span>from last month</span>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-title">Orders</span>
+                        <span class="card-icon orange">▤</span>
+                    </div>
+                    <h2>3,842</h2>
+                    <p class="positive">
+                        ↑ 5.7%
+                        <span>from last month</span>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-title">Feedback</span>
+                        <span class="card-icon green">★</span>
+                    </div>
+                    <h2>1,204</h2>
+                    <p class="positive">
+                        ↑ 10.1%
+                        <span>from last month</span>
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- ================= CHART ================= -->
+
+            <section class="chart-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Monthly Sales</h2>
+                        <p>Sales performance over the past 6 months</p>
+                    </div>
+
+                    <span class="chart-label">
+                        2026
+                    </span>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="y-axis">
+                        <span>$50k</span>
+                        <span>$40k</span>
+                        <span>$30k</span>
+                        <span>$20k</span>
+                        <span>$10k</span>
+                        <span>$0</span>
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+
+
+                        <div class="bars">
+
+                            <div class="bar-column">
+                                <div class="bar" style="height: 45%;"></div>
+                                <span>Jan</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height: 58%;"></div>
+                                <span>Feb</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height: 48%;"></div>
+                                <span>Mar</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height: 72%;"></div>
+                                <span>Apr</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height: 65%;"></div>
+                                <span>May</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height: 88%;"></div>
+                                <span>Jun</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RECENT ORDERS ================= -->
+
+            <section class="orders-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Recent Orders</h2>
+                        <p>Latest transactions from your customers</p>
+                    </div>
+
+                    <button class="view-btn">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>#ORD-1048</td>
+                                <td>Sarah Ahmed</td>
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>$420.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-1047</td>
+                                <td>Ali Hassan</td>
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td>$185.50</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-1046</td>
+                                <td>Emma Wilson</td>
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>$750.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-1045</td>
+                                <td>Hamza Khan</td>
+                                <td>
+                                    <span class="status cancelled">
+                                        Cancelled
+                                    </span>
+                                </td>
+                                <td>$120.00</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="footer">
+
+            <p>
+                © 2026 AdminFlow. All rights reserved.
+            </p>
+
+            <div>
+                Privacy · Terms · Support
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

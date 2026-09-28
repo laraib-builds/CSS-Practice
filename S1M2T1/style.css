@@ -1,0 +1,49 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    padding : 2px;
+}
+
+nav ul{
+    background-color: #2c3e50;
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 10px
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #53708d;
+}
+
+.heading{
+    color: #16a085;
+}
+
+#home{
+    background-color: rgb(209, 234, 234);
+}
+
+#about_us{
+    background-color: rgb(238, 225, 207);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+}

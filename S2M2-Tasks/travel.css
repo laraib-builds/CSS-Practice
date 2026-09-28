@@ -1,0 +1,475 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #263238;
+    background-color: #f8fafb;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd166;
+}
+
+
+/* Animated underline */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background-color: #ffd166;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 120px 20px 60px;
+}
+
+.small-heading {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #ffd166;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+.hero-content > p:not(.small-heading) {
+    max-width: 550px;
+    line-height: 1.7;
+    font-size: 17px;
+    color: #eeeeee;
+    margin-bottom: 35px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffd166;
+    color: #263238;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+.packages,
+.testimonials,
+.contact {
+    padding: 90px 20px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-heading p {
+    color: #e09f3e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    margin: 0 0 15px;
+}
+
+.section-heading span {
+    color: #777;
+}
+
+.package-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.package-card {
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.package-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.package-card:hover img {
+    transform: scale(1.05);
+}
+
+.package-content {
+    padding: 25px;
+}
+
+.package-type {
+    font-size: 11px;
+    color: #e09f3e;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.package-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+
+.package-content p {
+    color: #777;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+.package-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.package-bottom strong {
+    font-size: 22px;
+    color: #263238;
+}
+
+.package-bottom a {
+    text-decoration: none;
+    color: #e09f3e;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.package-bottom a:hover {
+    color: #b86f00;
+}
+
+.testimonials {
+    background-color: #eef5f5;
+}
+
+.testimonial-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: white;
+    text-align: center;
+    padding: 35px 25px;
+    border-radius: 14px;
+    border: 1px solid #e2e8e8;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+.testimonial-card p {
+    color: #666;
+    font-style: italic;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+.testimonial-card h3 {
+    margin: 20px 0 5px;
+    font-size: 17px;
+}
+
+.testimonial-card span {
+    font-size: 12px;
+    color: #999;
+}
+
+.contact {
+    background-color: white;
+}
+
+form {
+    max-width: 800px;
+    margin: auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea {
+    margin-top: 20px;
+    resize: vertical;
+}
+
+
+input:focus,
+textarea:focus {
+    border-color: #e09f3e;
+    box-shadow: 0 0 0 3px rgba(224, 159, 62, 0.12);
+}
+
+form button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #263238;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+form button:hover {
+    background-color: #e09f3e;
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: #18252b;
+    color: white;
+    padding: 45px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.footer-content h2 {
+    font-family: "Playfair Display", serif;
+    margin-top: 0;
+}
+
+.footer-content p {
+    color: #aeb8bc;
+    max-width: 350px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd166;
+}
+
+.copyright {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #35434a;
+    text-align: center;
+}
+
+.copyright p {
+    color: #8f9ba0;
+    font-size: 12px;
+    margin: 0;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        padding-top: 160px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .package-container,
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card:last-child,
+    .testimonial-card:last-child {
+        grid-column: auto;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}

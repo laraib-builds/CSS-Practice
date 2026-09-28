@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laraib Zafar | Computer Science Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class = navbar>
+       <div class="wrap">
+       <a href="#home" class="nav-logo" >Laraib Zafar</a>
+        <nav class="nav-links">
+           <a href="#about">About</a>
+           <a href="#projects">Projects</a>
+           <a href="#positioning">Positioning</a>                    <a href="#contact">Contact</a>
+        </nav>
+        <a class ="btn" href="https://github.com/laraib-builds" target="_blank" rel="noopener">Github</a> 
+    </div>
+</header>
+
+<main>
+    <section id="home" class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Computer science student building practical AI systems.</h1>
+          <p class="lead">I work on AI engineering, automation, and security through hands-on projects, and I'm looking for an internship where I can apply and grow these skills.</p>
+          <div class="btn-row">
+            <a href="#projects" class="btn">View projects</a>
+            <a href="#contact" class="btn outline">Get in touch</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="avatar-wrap">
+            <div class="avatar">L</div>
+            <span class="badge" aria-label="3 new notifications">3</span>  <!-- ABSOLUTE -->
+          </div>
+          <h2>Laraib Zafar</h2>
+          <p class="role">CS Student · Lahore, Pakistan</p>
+          <div class="profile-links">
+            <a class="btn on-wine" href="https://github.com/laraib-builds" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn on-wine" href="https://www.linkedin.com/in/laraib-zafar-98a804413" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="wrap">
+        <h2>About</h2>
+        <div class="about-grid">
+          <p>I learn by building, testing, and debugging. I would rather understand why a system works than only know which tool to use.</p>
+          <p>My path so far runs from C++ and data structures through Python, APIs, and AI. My current focus is AI engineering, automation, and AI security.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <p class="intro">A selection of things I've built while learning. Each links to its code on GitHub.</p>
+        <div class="project-grid">
+
+          <article class="project-card">
+            <span class="project-status">AI + DSA</span>
+            <h3>DSA Friend</h3>
+            <p>An AI-powered practice tool that makes data structures and algorithms problems interactive and encourages thinking before coding.</p>
+            <ul class="tech-stack">
+              <li>JavaScript</li>
+              <li>DSA</li>
+              <li>AI</li>
+            </ul>
+            <a class="project-link" href="https://github.com/laraib-builds/DSA-Friend" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status">RAG</span>
+            <h3>Local RAG Pipeline</h3>
+            <p>A fully local retrieval-augmented generation system that indexes personal notes, retrieves relevant chunks, and generates grounded answers.</p>
+            <ul class="tech-stack"><li>ChromaDB</li><li>Ollama</li><li>Streamlit</li></ul>
+            <a class="project-link" href="https://github.com/laraib-builds/local-rag-pipeline" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status">Automation</span>
+            <h3>Bulk Description Generator</h3>
+            <p>A LangGraph pipeline that generates product descriptions at scale and logs structured results to Excel.</p>
+            <ul class="tech-stack"><li>LangGraph</li><li>Groq</li><li>LangSmith</li></ul>
+            <a class="project-link" href="https://github.com/laraib-builds" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status">Security</span>
+            <h3>Security-Aware Reply Agent</h3>
+            <p>An experimental agent scaffold that explores layered defenses against prompt injection and unsafe instructions.</p>
+            <ul class="tech-stack"><li>Python</li><li>Agents</li><li>Security</li></ul>
+            <a class="project-link" href="https://github.com/laraib-builds" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="positioning" class="section alt">
+      <div class="wrap">
+        <h2>CSS positioning on this page</h2>
+        <p class="intro">Each of the five position values is used somewhere on this page. Scroll and resize to see them at work.</p>
+        <div class="position-grid">
+          <div class="position-item"><code>static</code><p>The default. All text sections flow in normal document order.</p></div>
+          <div class="position-item"><code>relative</code><p>The profile card and project cards. They anchor the elements placed inside them.</p></div>
+          <div class="position-item"><code>absolute</code><p>The red notification badge, project status chips, and the modal's close button.</p></div>
+          <div class="position-item"><code>sticky</code><p>The navigation bar, which stays at the top as you scroll.</p></div>
+          <div class="position-item"><code>fixed</code><p>The help button (bottom right) and the modal it opens.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div>
+          <h2>Let's connect</h2>
+          <p>Open to internships and collaboration. Reach me on LinkedIn or see more of my work on GitHub.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn on-wine" href="https://www.linkedin.com/in/laraib-zafar-98a804413" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn on-wine" href="https://github.com/laraib-builds" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Laraib Zafar</span>
+      <a href="https://github.com/laraib-builds" target="_blank" rel="noopener">github.com/laraib-builds</a>
+    </div>
+  </footer>
+
+  <!-- FIXED help button -->
+  <button class="help-btn" id="openHelp" aria-label="Open help">?</button>
+
+  <!-- Modal: overlay FIXED, box FIXED + centered, close button ABSOLUTE -->
+  <div class="modal-overlay" id="overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeHelp" aria-label="Close">&times;</button>
+      <h2 id="modalTitle">A fixed, centered modal</h2>
+      <p>This box stays attached to the window with <code>position: fixed</code>, and <code>transform</code> centers it regardless of its size.</p>
+      <div class="modal-code">
+        position: fixed;<br>
+        top: 50%;<br>
+        left: 50%;<br>
+        transform: translate(-50%, -50%);
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* JavaScript only toggles the "open" class; CSS does the showing and hiding. */
+    const overlay = document.getElementById('overlay');
+    document.getElementById('openHelp').addEventListener('click', () => overlay.classList.add('open'));
+    document.getElementById('closeHelp').addEventListener('click', () => overlay.classList.remove('open'));
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); }); /* click outside the box */
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+  </script>
+
+</body>
+</html>
